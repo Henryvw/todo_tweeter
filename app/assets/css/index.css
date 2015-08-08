@@ -1,0 +1,32 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input.description {
+  width: 79%;
+}
+
+input[type=submit] {
+  background-color: #89CEFF;
+  width: 20%;
+  border: none;
+}
+
+.todo-items {
+  margin-top: 3em;
+  width: 100%;
+}
+
+.todo-items th, .todo-items td {
+  border-bottom: 1px solid grey;
+}
+
+form {
+  margin-top: 3em;
+}
