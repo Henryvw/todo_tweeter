@@ -1,4 +1,6 @@
 class TodoItem
+  @@all = []
+
   def initialize(description)
     @description = description
     @finished = false
@@ -18,6 +20,10 @@ class TodoItem
 
   def finished=(boolean)
     @finished = boolean
+  end
+
+  def save
+    false
   end
 
   def self.all

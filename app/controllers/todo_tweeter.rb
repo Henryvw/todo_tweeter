@@ -9,12 +9,12 @@ class TodoTweeter < Sinatra::Base
 
   post '/' do
     tweet_bot = TweetBot.new
-    message = params[:message]
-    if tweet_bot.tweet_msg(message)
-      erb :'success'
+    todo_item = TodoItem.new(params[:description])
+
+    if todo_item.save
+      redirect to "/"
     else
-      puts "Now sending error message"
-      send_file "app/views/404.html"
+      erb :"404"
     end
   end
 
