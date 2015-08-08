@@ -13,4 +13,8 @@ class TweetBot
     @client.update(msg)
   end
 
+  def format_msg(msg)
+    "I just finished: #{msg}"[0..139]
+  end
+
 end
