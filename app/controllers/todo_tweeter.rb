@@ -3,6 +3,7 @@ class TodoTweeter < Sinatra::Base
   set :views, Proc.new { File.join(root, "../views/") }
 
   get '/' do
+    @todo_items = TodoItem.all
     erb :'index'
   end
 
@@ -10,9 +11,10 @@ class TodoTweeter < Sinatra::Base
     tweet_bot = TweetBot.new
     message = params[:message]
     if tweet_bot.tweet_msg(message)
-      "You just send a tweet!"
+      erb :'success'
     else
-      "Sorry, something went wrong"
+      puts "Now sending error message"
+      send_file "app/views/404.html"
     end
   end
 

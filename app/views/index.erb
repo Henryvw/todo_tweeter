@@ -1,5 +1,21 @@
-<h2>Welcome Traveler - Let us know what you think!</h2>
+<h2>Todo-Tweeter - tweet what you get done</h2>
 <form action="/" method="post">
-  <input type="text" name="message"/>
-  <input type="submit" placeholder="Type in your tweet here..."/ value="Tweet">
+  <input type="text" name="todo_item"/>
+  <input type="submit" placeholder="Add todo items here" value="Tweet"/>
 </form>
+<table class="todo-items">
+  <thead>
+    <tr>
+      <th>Done</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @todo_items.each do |todo_item| %>
+      <tr>
+        <td><%= todo_item.done? %></td>
+        <td><%= todo_item.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
