@@ -4,18 +4,18 @@ class TodoTweeter < Sinatra::Base
 
   helpers do
     def boolean_in_words(boolean)
-      boolean ? "Yes" : "No :/"
+      boolean ? "Yes :)" : "No :/"
     end
   end
 
   get '/' do
     @todo_items = TodoItem.all
+
     erb :'index'
   end
 
   post '/' do
-    tweet_bot = TweetBot.new
-    todo_item = TodoItem.new(params[:description])
+    todo_item = TodoItem.new(description: params[:description])
 
     if todo_item.save
       redirect to "/"
@@ -25,7 +25,7 @@ class TodoTweeter < Sinatra::Base
   end
 
   post '/update' do
-    todo_item = TodoItem.find_by_id(params[:id])
+    todo_item = TodoItem.find(params[:id])
     todo_item.finished = true
 
     if todo_item.save
