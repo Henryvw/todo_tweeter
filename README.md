@@ -1,6 +1,8 @@
 ##Todo Tweeter
 The test application for Lernwerkstatts programming workshop.
 
+Check out a preview of the application [here](https://guarded-journey-2204.herokuapp.com/).
+
 ###How to get started developing
 
 1. After bundling, create a `.env` file to keep credentials:
