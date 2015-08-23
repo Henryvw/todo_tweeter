@@ -1,5 +1,6 @@
 class TodoTweeter < Sinatra::Base
   get "/" do
-    send_file "index.html"
+    @todo_item = TodoItem.new
+    erb :"index"
   end
 end
