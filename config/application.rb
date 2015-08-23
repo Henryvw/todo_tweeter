@@ -5,7 +5,7 @@ Dotenv.load
 Dir[File.join(File.dirname(__FILE__), "../app/controllers", "*.rb")].each {|f| require f}
 Dir[File.join(File.dirname(__FILE__), "../app/models", "*.rb")].each {|f| require f}
 
-db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/todo_tweeter')
+db = URI.parse(ENV['DATABASE_URL'])
 
 ActiveRecord::Base.establish_connection(
   :adapter => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
