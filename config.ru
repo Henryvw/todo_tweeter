@@ -1,4 +1,4 @@
 require 'sinatra'
-require './todo_tweeter.rb'
-require './todo_item.rb'
+require './app/controllers/todo_tweeter.rb'
+require './app/models/todo_item.rb'
 run TodoTweeter
