@@ -16,4 +16,5 @@ ActiveRecord::Base.establish_connection(
   :encoding => 'utf8'
 )
 
+use Rack::Static, :urls => ['/css'], :root => 'app/assets'
 run TodoTweeter

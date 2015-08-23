@@ -1,0 +1,51 @@
+* {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10%;
+  text-align: center;
+}
+
+form#description {
+  margin-top: 3em;
+}
+
+form#description input.description {
+  padding: 6px;
+  width: 75%;
+}
+
+form#description input[type=submit] {
+  background-color: #89CEFF;
+  padding: 7px;
+  width: 20%;
+  border: none;
+}
+
+form#description input[type=submit]:hover {
+  cursor: pointer;
+  background-color: #7CBDEA;
+}
+
+.todo-items {
+  margin-top: 3em;
+  width: 100%;
+}
+
+.todo-items th, .todo-items td {
+  border-bottom: 1px solid grey;
+}
+
+form#update input[type=submit] {
+  background-color: #80E880;
+  padding: 7px;
+  border: none;
+}
+
+form#update input[type=submit]:hover {
+  cursor: pointer;
+  background-color: #7BDC7B;
+}
