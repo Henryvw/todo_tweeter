@@ -1,0 +1,2 @@
+adapter: postgresql
+database: todo_tweeter

@@ -12,11 +12,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><%= @todo_item.finished %></td>
-      <td><%= @todo_item.description %></td>
-      <td>Check</td>
-    </tr>
+    <% @todo_items.each do |todo_item| %>
+      <tr>
+        <td><%= todo_item.finished %></td>
+        <td><%= todo_item.description %></td>
+        <td>Check</td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 </div>

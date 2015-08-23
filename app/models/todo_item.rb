@@ -1,11 +1,4 @@
-class TodoItem
+require 'active_record'
 
-  def description
-    "Walk the dog"
-  end
-
-  def finished
-    false
-  end
-
+class TodoItem < ActiveRecord::Base
 end
