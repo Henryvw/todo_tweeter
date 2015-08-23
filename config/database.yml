@@ -1,7 +1,2 @@
-development:
-  adapter: postgresql
-  database: todo_tweeter
-production:
-  adapter: postgresql
-  database: todo_tweeter
-  url: <%= ENV['DATABASE_URL'] %>
+adapter: postgresql
+database: todo_tweeter
