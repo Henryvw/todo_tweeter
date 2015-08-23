@@ -20,6 +20,9 @@ class TodoTweeter < Sinatra::Base
     todo_item.finished = true
     todo_item.save
 
+    tweet_bot = TweetBot.new
+    tweet_bot.tweet_msg(todo_item.description)
+
     redirect to "/"
   end
 end

@@ -1,6 +1,9 @@
 require 'sinatra'
+require 'dotenv'
 require './app/controllers/todo_tweeter.rb'
 require './app/models/todo_item.rb'
+require './app/models/tweet_bot.rb'
+Dotenv.load
 
 db = URI.parse('postgres://localhost/todo_tweeter')
 
