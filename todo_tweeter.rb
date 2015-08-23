@@ -1,5 +1,5 @@
 class TodoTweeter < Sinatra::Base
   get "/" do
-    "Hello World"
+    send_file "index.html"
   end
 end
