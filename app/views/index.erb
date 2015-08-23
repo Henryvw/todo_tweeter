@@ -1,6 +1,6 @@
 <h2>Todo Tweeter</h2>
 <form id="description" action="/" method="post">
-  <input type="text" name="description" class="description"/>
+  <input type="text" placeholder="Add a new todo here..." name="description" class="description"/>
   <input type="submit" value="Add"/>
 </form>
 <table class="todo-items">
@@ -16,7 +16,14 @@
       <tr>
         <td><%= todo_item.finished %></td>
         <td><%= todo_item.description %></td>
-        <td>Check</td>
+         <% if todo_item.not_done? %>
+          <td>
+            <form id="update" action="/update" method="post">
+              <input type="hidden" value="<%= todo_item.id %>" name="id"/>
+              <input type="submit" value="Check"/>
+            </form>
+        </td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

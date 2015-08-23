@@ -5,4 +5,21 @@ class TodoTweeter < Sinatra::Base
     @todo_items = TodoItem.all
     erb :"index"
   end
+
+  post '/' do
+    todo_item = TodoItem.new(description: params[:description])
+
+    todo_item.save
+
+    redirect to "/"
+  end
+
+  post '/update' do
+    todo_item = TodoItem.find(params[:id])
+
+    todo_item.finished = true
+    todo_item.save
+
+    redirect to "/"
+  end
 end
