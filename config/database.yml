@@ -1,2 +1,5 @@
-adapter: postgresql
-database: todo_tweeter
+development:
+  adapter: postgresql
+  database: postgres
+  host: db
+  username: postgres

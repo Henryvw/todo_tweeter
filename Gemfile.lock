@@ -41,6 +41,9 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
+    sinatra-activerecord (2.0.8)
+      activerecord (>= 3.2)
+      sinatra (~> 1.0)
     thread_safe (0.3.5)
     tilt (2.0.1)
     twitter (5.14.0)
@@ -65,7 +68,8 @@ DEPENDENCIES
   dotenv
   pg
   sinatra
+  sinatra-activerecord
   twitter
 
 BUNDLED WITH
-   1.10.4
+   1.10.6
