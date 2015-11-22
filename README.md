@@ -51,6 +51,20 @@ The Bureaucrat Lady handles our formula, and the formula the filing of all visit
 
 All told this organization of a program is called MVC: Model - View - Controller.
 
+# Basics of Programming Mixed With Steps To Creating Your Own To-do List App
+
+### Your 3 Key Tools
+There are 3 key tools you will use in programming applications for the web.
+
+1. **Terminal** - Terminal is a tool to issue commands to your computer. For example, to create text files, to create folders, to move text files between folders, to activate programs, and so on.
+2. A text editor - In our case Sublime Text 2. We write programs in plain text and even a simple text editor will work. However fancy editors like Sublime Text 2 offer many helpful features and pretty colors. 
+3. **Your Browser**
+Your browser is the tool to view your application. All modern browsers have great "developer tools" that will also let you see the output of your pages.
+
+# Steps To Developing Your Own To-Do App
+### 1. Creating folders and files workspace
+´mkdir workspace´ 
+
 # Workshop Guidebook:
 ## Basic Programming - 
 ## Code Deine Erste Web App
