@@ -24,8 +24,12 @@ Happy development!
 **Philosophy of the Workshop**
 We've designed this workshop to fluctuate between two modes: short bursts of explanation of a piece of content, followed by you all, as participants, in teams of 2-3 with a laptop, experimenting by actually inputting that idea into your own application.
 
+Feel free anytime to stop or interrupt me with questions. If you have the question, probably others do as well.
+
 **What You Are Building**
 You are building a simple web application to create your own to-do lists. If we are lucky and have enough time, we will also help you to be able to integrate with the Twitter API to also send out a Tweet when you complete a to-do list task.
+
+Here's what it looks like - show them the Todo Tweeter App
 
 I will start with a general introduction to the ideas of programming. 
 
@@ -63,7 +67,68 @@ Your browser is the tool to view your application. All modern browsers have grea
 
 # Steps To Developing Your Own To-Do App
 ### 1. Creating folders and files workspace
-´mkdir workspace´ 
+`mkdir workspace`
+`cd workspace`
+`mkdir todo-tweeter`
+`touch todo_tweeter.rb`
+
+### 2. Gems
+Gems of blocks of code that other developers have written. You can think of them like more advanced lego sets. A lot of modern computing is putting together blocks of other people's code.
+`touch Gemfile`
+
+Open the Gemfile in Sublime Text 2, and enter the following:
+
+`source 'http://rubygems.org'`
+`ruby '2.2.2'`
+`gem 'Sinatra'`
+
+Now what do you suppose is saved, without even looking at it, on the rubygems website?
+
+Now, how can we get the .rb file to read from the Gemfile? (wow.. good question... do I need to require it somehow? Need to Google this question. It appears Matthias in his app... maybe requires it through requiring Bundler in application.rb, which in turn is required in the Rakefile? Why does he have a Rakefile?)
+
+###3. Writing our first Sinatra Handler 
+`get '/' do` 
+  `Todo Tweeter - Tweet Your Life`
+`end`  
+
+###3. Running a program
+How do you run a program? Well there are different ways, but one simple way is to type into Terminal, 
+`ruby todo_tweeter.rb`  
+
+###4. Viewing it in your Browser
+Now you see your program is running. Where does it tell you to go?
+
+###5. Web applications are a mix of many different languages.
+Let me step back for a second. The web is built on many different "languages". HTTP, HTML, Javascript, CSS. There are actually many different languages with different functions.
+
+Now going back to our Bürgeramt analogy, HTTP, which is the original language of the web, it has 4 core actions as a language: GET, POST, PUT, DELETE. 
+
+What we're telling Sinatra to do is, when the Browser makes a GET request at this URL, send it back the following String of text.
+
+###6. Loading HTML Views
+Now sending a string of text is all well and good, but when the Web was first created, they created a language called HTML to be able to access and deliver whole 'pages' or 'webpages' of text and images and all kinds of other stuff. So let's have our Sinatra Handler fetch an actual page.
+
+First let's go ahead and create the folder where that page will live. We like to store all our designs and designed pages in a folder called views.
+`mkdir views`  
+
+Then, let's create the file: 
+`touch index.erb`  
+
+Now erb, why erb instead of html? Well, erb is a type of html that allows Ruby code to be included as well.
+
+Is all of this making sense so far?
+
+Now, our Sinatra Handler needs to call this file if we want it to appear in our application. So now let's create a new route:
+
+`get '/show_me' do` 
+  `erb :the_money`
+`end`
+
+
+ 
+ 
+
+
 
 # Workshop Guidebook:
 ## Basic Programming - 
