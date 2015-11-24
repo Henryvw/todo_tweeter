@@ -88,7 +88,7 @@ Now, how can we get the .rb file to read from the Gemfile? (wow.. good question.
 
 ###3. Writing our first Sinatra Handler 
 `get '/' do` 
-  `Todo Tweeter - Tweet Your Life`
+  `'Todo Tweeter - Tweet Your Life'`
 `end`  
 
 ###3. Running a program
@@ -118,12 +118,28 @@ Now erb, why erb instead of html? Well, erb is a type of html that allows Ruby c
 
 Is all of this making sense so far?
 
-Now, our Sinatra Handler needs to call this file if we want it to appear in our application. So now let's create a new route:
+Now we need to add some HTML to this document.
 
-`get '/show_me' do` 
-  `erb :the_money`
+HTML can look messy but it's generally simple. It's all about displaying content and simple designs for it. You usually have an opening tag and a closing tag.
+
+First you declare that it's an HTML document. Then let's add our title in here.
+  `<!doctype html>`
+  `<h1>Todo Tweeter - Tweet Your Life</h1>`
+h stands for header, and there are 5 different levels of header, going from H1 to H5. It's as simple as that.
+
+Now, our Sinatra Handler needs to call this file if we want it to appear in our application. So now let's update our route:
+
+`get '/' do` 
+  `erb :index`
 `end`
 
+Now in Developer Tools, you can actually see the HTML of your page, if you click on your words and go to inspect element. 
+
+###Creating To-Dos
+html form submit... 
+post request... 
+
+###Displaying ToDos
 
  
  
